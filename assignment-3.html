@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+	
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">				
+	</head>
+
+	<body>
+		<div class="header">
+			<img class="header" src="http://people.oregonstate.edu/~symondsm/Assignment%202/Header.jpg">
+			<div class="menu" style="right:10%">
+				<button class="navButtons">Wikipedia</button>
+				<div class="drop-down">
+					<ul>
+						<li><a class="link" href="https://en.wikipedia.org/wiki/S-Town">Link 1</a></li>
+						<li><a class="link" href="#">Link 2</a></li>
+						<li><a class="link" href="#">Link 3</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="menu"  style="right:25%">
+				<button class="navButtons">Podcast</button>
+				<div class="drop-down">
+					<ul>
+						<li><a class="link" href="https://www.stitcher.com/podcast/this-american-life/stown">Link 1</a></li>
+						<li><a class="link" href="#">Link 2</a></li>
+						<li><a class="link" href="#">Link 3</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="menu"  style="right:40%">
+				<button class="navButtons">Obituary</button>
+				<div class="drop-down">
+					<ul>
+						<li><a class="link" href="https://web.archive.org/web/20170926191033/http://obits.al.com/obituaries/birmingham/obituary.aspx?n=john-b-mclemore&pid=175165387">Link 1</a></li>
+						<li><a class="link" href="#">Link 2</a></li>
+						<li><a class="link" href="#">Link 3</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="menu"  style="right:55%">	
+				<button class="navButtons">Fire-Gilding</button>
+				<div class="drop-down">
+					<ul>
+						<li><a class="link" href="https://www.livescience.com/58659-what-is-fire-gilding.html">Link 1</a></li>
+						<li><a class="link" href="#">Link 2</a></li>
+						<li><a class="link" href="#">Link 3</a></li>
+					</ul>
+				</div>
+			</div>				
+		</div>
+		<div class="box">
+			<h1>S* Town</h1>
+			<div>
+				<img class="image" src="http://people.oregonstate.edu/~symondsm/Assignment%202/john.jpg">
+				<img class="image" src="john2.jpg">
+				<img class="image" src="john3.jpg">
+				<img class="image" src="john4.jpg">
+			</div>
+
+			<div class="bodytext">
+				<p class="text" id ="para1" ondblclick="changeText('para1','edit1','button1')">In 2012, antiquarian horologist John B. McLemore sent an email to the staff of the show This American Life asking them to investigate an alleged murder in his hometown of Woodstock, Alabama, a place McLemore claimed to despise. After a year of exchanging emails, and several months of conversation with McLemore, producer Brian Reed traveled to Woodstock to investigate.
+				</p>
+
+				<textarea id="edit1">
+				In 2012, antiquarian horologist John B. McLemore sent an email to the staff of the show This American Life asking them to investigate an alleged murder in his hometown of Woodstock, Alabama, a place McLemore claimed to despise. After a year of exchanging emails, and several months of conversation with McLemore, producer Brian Reed traveled to Woodstock to investigate.
+				</textarea>
+				<button id="button1" onclick="submit('edit1','button1','para1')">Submit</button>
+
+				<p class="text" id="para2" ondblclick="changeText('para2','edit2', 'button2')">Reed investigated the crime, and eventually found that no such murder took place, though he struck up a friendship with the depressed but colorful character of McLemore. He recorded conversations with McLemore and other people in Woodstock, which are played on the podcast.
+				</p>
+
+				<textarea id="edit2">
+				Reed investigated the crime, and eventually found that no such murder took place, though he struck up a friendship with the depressed but colorful character of McLemore. He recorded conversations with McLemore and other people in Woodstock, which are played on the podcast.
+				</textarea>
+				<button id="button2" onclick="submit('edit2','button2','para2')">Submit</button>
+
+			<h2>Seven Tiles</h2>
+
+			<ul id="list">
+				<li class="tile"><button onclick="deleteTile(0)">x</button><img class="tile-image" src="maze.png">Image 1</li>
+				<li class="tile"><button onclick="deleteTile(1)">x</button><img class="tile-image" src="clock.png">Image 2</li>
+				<li class="tile"><button onclick="deleteTile(2)">x</button><img class="tile-image" src="whip.png">Image 3</li>
+				<li class="tile"><button onclick="deleteTile(3)">x</button><img class="tile-image" src="chest.png">Image 4</li>
+				<li class="tile"><button onclick="deleteTile(4)">x</button><img class="tile-image" src="tat.png">Image 5</li>
+				<li class="tile"><button onclick="deleteTile(5)">x</button><img class="tile-image" src="k3.png">Image 6</li>
+				<li class="tile"><button onclick="deleteTile(6)">x</button><img class="tile-image" src="gold.png">Image 7</li>
+			</ul>
+			<button onclick="reset()">Reset</button>
+			<button onclick="clearTiles()">Clear</button>
+			</div>
+
+		</div>
+
+	<footer>				
+		<p>Created by Marji Symonds and Shayla Lane for Assignment 3</p>
+	</footer>
+
+	<script>
+		function deleteTile(listNum) {
+		  var tileList = document.getElementsByClassName("tile");
+		  tileList[listNum].style.display = "none";
+		}
+
+		function reset() {
+			var tileIndex;
+			var tileList = document.getElementsByClassName("tile");
+			for (tileIndex=0; tileIndex < tileList.length; tileIndex++) {
+				tileList[tileIndex].style.display = "inline-block";
+			}
+		}
+
+		function clearTiles() {
+			var tileIndex;
+			var tileList = document.getElementsByClassName("tile");
+			for (tileIndex=0; tileIndex < tileList.length; tileIndex++) {
+				tileList[tileIndex].style.display = "none";
+			}
+		}
+
+
+		var slide = 0;
+		carousel();
+
+		function carousel() {
+			var i;
+			var allSlides = document.getElementsByClassName("image");
+			for (i=0; i < allSlides.length; i++) {
+				allSlides[i].style.display = "none";
+			}
+			slide++;
+			if (slide > allSlides.length) {slide = 1}
+			allSlides[slide-1].style.display = "block";
+			setTimeout(carousel, 3000);
+			}
+
+		function changeText(para,edit,button) {
+			document.getElementById(para).style.display = "none";
+			document.getElementById(edit).style.display = "inline-block";
+			document.getElementById(button).style.display = "inline-block";
+		}
+
+		function submit(edit,button,para) {
+			var replace = document.getElementById(edit).value;
+			document.getElementById(edit).style.display = "none";
+			document.getElementById(button).style.display = "none";
+			document.getElementById(para).innerHTML = replace;
+			document.getElementById(para).style.display = "inline-block";
+		}
+		
+	</script>
+</body>
+
+</html>

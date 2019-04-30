@@ -1,0 +1,164 @@
+body {
+	background-image: url("http://people.oregonstate.edu/~symondsm/Assignment%202/black-linen.png");
+	background-repeat:repeat;
+}
+
+h1 {
+	text-align:left;
+	font-family:"Arial";
+	letter-spacing:4px;
+	text-align:center;
+	font-size:4vw;
+}
+
+a.link {
+	font-family:sans-serif;
+	color:purple;
+	font-size: 2vw;
+}
+
+a:hover {
+	background-color:pink;
+	opacity:0.75;
+}
+
+
+img.image {
+	opacity:1; 
+	width:55%;
+	height:auto;
+	float:left;
+	padding:3px;
+	margin:15px;
+	display:none;
+	border-style:solid;
+	border-color:grey; 
+	border-width:5;
+	border-radius:15px; 
+	box-shadow:3px 2px;
+}
+
+img.tile-image {
+	margin-left:auto; 
+	margin-right:auto; 
+	width:100%;
+	display:inline-block;
+}
+
+img.header {
+	width:110%; 
+	height:auto;
+}
+
+
+div.box {
+	width:80%;
+	margin:auto;
+	background-color:pink;
+	opacity:0.75;  
+	padding-bottom:20px;
+	margin-top:-8%;
+	box-shadow:6px 10px;
+	border-top-style:solid;
+	border-top-color:white;
+	border-width:2px;
+	border-left-style:solid;
+	border-left-color:white;
+	border-right-style:solid;
+	border-right-color:white;
+
+}
+
+div.bodytext {
+	padding:10px;
+	display:inline;
+	font-size: 2vw;
+}
+
+div.header {
+	width:100%;
+	height:auto;
+	margin:-8px; 
+}
+
+li.tile {
+background-image:linear-gradient(to bottom right,#493289, #71074E, #D0140E);
+width:30%;
+height:auto;
+display:inline-block;
+text-align:center;
+margin:5px; 
+color:white;
+}
+
+div.drop-down {
+	display: none;
+}
+
+div.menu {
+	position:absolute;  
+	top:3%;
+	width:100%; 
+	text-align:right;
+	right:3%;
+	background-color: none;
+	display: inline-block;
+	z-index:10;
+}
+
+
+footer {
+	width:110%;
+	height:50px;
+	background-color:pink;
+	text-align:center;
+	opacity:0.75;
+	padding:5px;
+	margin-top:15px;
+}
+
+
+p.text {
+	padding:15px;
+	padding-top:0px;
+	text-indent:20px;
+}
+
+h1 {
+	text-align: left;
+	padding-left:3%;
+}
+
+h2 {
+	font-family:"Arial";
+	padding-left:15px;
+}
+
+ul {
+ list-style-type: none;
+}
+
+button.navButtons {
+	font-family:"Arial";
+	color:black;
+	padding:5px;
+	font-size: 2vw;
+}
+
+.drop-down a:hover {
+	background-color: #ddd;
+}
+
+.menu:hover .drop-down {
+	display: block;
+}
+
+.menu:hover .navButtons {
+	background-color: lavender;
+	display: inline-block;
+}
+
+#edit1, #edit2, #button1, #button2 {
+	display:none;
+
+}
