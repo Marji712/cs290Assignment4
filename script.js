@@ -1,25 +1,18 @@
 
-        function deleteTile(listNum) {
-          var tileList = document.getElementsByClassName("tile");
-          tileList[listNum].style.display = "none";
-        }
 
-        function reset() {
-            var tileIndex;
-            var tileList = document.getElementsByClassName("tile");
-            for (tileIndex=0; tileIndex < tileList.length; tileIndex++) {
-                tileList[tileIndex].style.display = "inline-block";
-            }
-        }
+$(document).ready(function(){
+	$("#clearTile").click(function(){
+		$("#list li").hide();
+	});
 
-        function clearTiles() {
-            var tileIndex;
-            var tileList = document.getElementsByClassName("tile");
-            for (tileIndex=0; tileIndex < tileList.length; tileIndex++) {
-                tileList[tileIndex].style.display = "none";
-            }
-        }
+	$("#resetTile").click(function(){
+		$("#list li").show();
+	});
 
+	$("#list button").click(function(){
+		$(this).parent().hide();
+	});
+});
 
         var slide = 0;
         carousel();
