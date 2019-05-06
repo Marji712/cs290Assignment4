@@ -12,6 +12,18 @@ $(document).ready(function(){
 	$("#list button").click(function(){
 		$(this).parent().hide();
 	});
+
+	$(".bodytext p").dblclick(function(){
+		$(this).hide();
+		$(this).nextUntil("p").show();
+	});
+
+	$(".bodytext button").click(function(){
+		$(this).hide();
+		$(this).prev().hide();
+		$(".bodytext p").show();
+
+	});
 });
 
         var slide = 0;
@@ -29,17 +41,17 @@ $(document).ready(function(){
             setTimeout(carousel, 3000);
             }
 
-        function changeText(para,edit,button) {
-            document.getElementById(para).style.display = "none";
-            document.getElementById(edit).style.display = "inline-block";
-            document.getElementById(button).style.display = "inline-block";
-        }
+        //             function changeText(para,edit,button) {
+        //     document.getElementById(para).style.display = "none";
+        //     document.getElementById(edit).style.display = "inline-block";
+        //     document.getElementById(button).style.display = "inline-block";
+        // }
 
-        function submit(edit,button,para) {
-            var replace = document.getElementById(edit).value;
-            document.getElementById(edit).style.display = "none";
-            document.getElementById(button).style.display = "none";
-            document.getElementById(para).innerHTML = replace;
-            document.getElementById(para).style.display = "inline-block";
-        }
-        
+        // function submit(edit,button,para) {
+        //     var replace = document.getElementById(edit).value;
+        //     document.getElementById(edit).style.display = "none";
+        //     document.getElementById(button).style.display = "none";
+        //     document.getElementById(para).innerHTML = replace;
+        //     document.getElementById(para).style.display = "inline-block";
+        // }
+
