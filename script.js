@@ -25,21 +25,16 @@ $(document).ready(function(){
 		$(this).prev().prev().show();
 
 	});
+
+	$(function() {
+		$(".allImages img:gt(0)").hide();
+		setInterval(function(){
+			$(".allImages :first-child").hide()
+			.next('img').show()
+			.end().appendTo(".allImages");}, 3000);
+		});
+
+
 });
-
-        var slide = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var allSlides = document.getElementsByClassName("image");
-            for (i=0; i < allSlides.length; i++) {
-                allSlides[i].style.display = "none";
-            }
-            slide++;
-            if (slide > allSlides.length) {slide = 1}
-            allSlides[slide-1].style.display = "block";
-            setTimeout(carousel, 3000);
-            }
 
 
